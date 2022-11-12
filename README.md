@@ -12,9 +12,9 @@ npm i react_dynamic_nested_table
 ```bash
 yarn add react_dynamic_nested_table
 ```
-##
+##<img width="1385" alt="Screenshot 2022-11-12 at 11 36 13 PM" src="https://user-images.githubusercontent.com/83487057/201487284-d9fbb188-8313-4b29-af3e-9ca3b4b40cf2.png">
 ```
-![Uploading Screenshot 2022-11-12 at 11.36.13 PM.png…]()
+
 ```
 
 ## Usage
