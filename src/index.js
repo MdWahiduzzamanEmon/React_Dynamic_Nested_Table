@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//Author Name: Md Wahiduzzaman Emon
+//Author GitHub URL: https://github.com/MdWahiduzzamanEmon
+//Author LinkedIn URL: https://www.linkedin.com/in/md-wahiduzzaman-emon-5b1b3b1b3/
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

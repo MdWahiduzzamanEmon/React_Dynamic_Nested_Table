@@ -1,3 +1,7 @@
+//Author Name: Md Wahiduzzaman Emon
+//Author GitHub URL: https://github.com/MdWahiduzzamanEmon
+//Author LinkedIn URL: https://www.linkedin.com/in/md-wahiduzzaman-emon-5b1b3b1b3/
+
 import React from 'react';
 import classes from './MianTable.module.css';
 const MainTable = ({ align, titles, data, filter, tableHeaderDesign, ...rest }) => {

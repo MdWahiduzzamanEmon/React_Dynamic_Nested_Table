@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+//Author Name: Md Wahiduzzaman Emon
+//Author GitHub URL: https://github.com/MdWahiduzzamanEmon
+//Author LinkedIn URL: https://www.linkedin.com/in/md-wahiduzzaman-emon-5b1b3b1b3/
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <></>
     </div>
   );
 }
