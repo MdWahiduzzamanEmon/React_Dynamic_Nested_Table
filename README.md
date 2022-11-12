@@ -1,70 +1,174 @@
-# Getting Started with Create React App
+# React Dynamic Nested Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a table component that is so powerful to create a nested table, and also can filter(show-hide) columns.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Use the package manager [npm/yarn](https://www.npmjs.com/) to install react dynamic nested table.
 
-### `npm start`
+```bash
+npm i react_dynamic_nested_table
+```
+```bash
+yarn add react_dynamic_nested_table
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+import MainTable, { FilterTableColumn } from 'react_dynamic_nested_table';
 
-### `npm test`
+<!---please read the documentation first --->
+```
+## How to use table component
+```
+How to use a simple table :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ const titles = [
+      'Name',
+      'Age',
+      'Address',
+      'Phone',
+    ]
 
-### `npm run build`
+const data = [
+      {
+        name: 'John',
+        age: 20,
+        address: 'Jessore',
+        phone: '123456789',
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      },
+      {
+        name: 'Doe',
+        age: 30,
+        address: 'Dhaka',
+        phone: '123456789',
+      }
+    ]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<MainTable data={data} titles={titles} />
+```
+```
+How to use dynamic table :
+    
+ const titles = [
+      'Name',
+      'Age',
+      'Address',
+      'Phone',
+    ]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const data = [
+      {
+        name: 'John',
+        age: 20,
+        address: 'Jessore',
+        phone: '123456789',
 
-### `npm run eject`
+      },
+      {
+        name: 'Doe',
+        age: 30,
+        address: 'Dhaka',
+        phone: '123456789',
+      }
+    ]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+const newData = data?.map((item) => {
+      return {
+        name: item.name,
+        age: item.age,
+        address: item.address,
+        phone: item.phone
+      }
+    }
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<MainTable data={newData} titles={titles} />
+```
+```
+How to use Filter in a table :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ const titles = [
+      'Name',
+      'Age',
+      'Address',
+      'Phone',
+    ]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const [columnPreviousDataId, setColumnPreviousDataId] = React.useState("");
+const [columnPreviousData, setColumnPreviousData] = React.useState([]);
+const [tableTitles, setTableTitles] = React.useState([...titles]);
+const [isShowTableColumn, setIsShowTableColumn] = React.useState({
+      Name: true,
+      Age: true,
+      Address: true,
+      Phone: true
+    });
 
-## Learn More
+//N.B: make sure the title name, and table column condition name are the same. Don't use something like this to name your_name. Use instead YourName.It will generate a table header Like this (Your Name)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const data = [
+      {
+        name: 'John',
+        age: 20,
+        address: 'Jessore',
+        phone: '123456789',
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      },
+      {
+        name: 'Doe',
+        age: 30,
+        address: 'Dhaka',
+        phone: '123456789',
+      }
+    ]
 
-### Code Splitting
+const newData = data?.map((item) => {
+      return {
+        ...isShowTableColumn.Name && { Name: item.name },
+        ...isShowTableColumn.Age && { Age: item.age },
+        ...isShowTableColumn.Address && { Address: item.address },
+        ...isShowTableColumn.Phone && { Phone: item.phone },
+      }
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+const handleFilterPostData = async (columndata) => {
+      // console.log(columnData)
+      //post and put column data from here
+    }
 
-### Analyzing the Bundle Size
+//you can get data from API and set your state to use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+//use this component to add a filter. You can use it and dialog/modal with the button if you want
 
-### Making a Progressive Web App
+ <FilterTableColumn
+            tableTitles={tableTitles}
+            setTableTitles={setTableTitles}
+            isShowTableColumn={isShowTableColumn}
+            setIsShowTableColumn={setIsShowTableColumn}
+            titles={titles}
+            handlePostData={handlePostData}
+          />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+//table component with filter true props to add filter
 
-### Advanced Configuration
+<MainTable data={newData} titles={titles} filter={true} />
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+Available table props are - 
+                      1.data={data} types-array([])
+                      2.titles={titles} types-array([])
+                      3.filter={false}  types-Boolean(true/false)(default-false)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Available filter props are - 
+                      1.tableTitles types-array([])
+                      2. setTableTitles types-func()
+                      3. isShowTableColumn  types-Boolean(true/false)
+                      4. setIsShowTableColumn types-func()
+                      5. titles types-array([])
+                      6. handlePostData
+types-func()
+```
