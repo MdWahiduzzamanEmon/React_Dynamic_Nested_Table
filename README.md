@@ -12,13 +12,10 @@ npm i react_dynamic_nested_table
 ```bash
 yarn add react_dynamic_nested_table
 ```
-##
-```
-https://user-images.githubusercontent.com/83487057/201487662-78b1bce8-9fe5-445e-9a79-6cb17a86b6a3.mov
 
-<img width="1385" alt="Screenshot 2022-11-12 at 11 36 13 PM" src="https://user-images.githubusercontent.com/83487057/201487284-d9fbb188-8313-4b29-af3e-9ca3b4b40cf2.png">
+https://user-images.githubusercontent.com/83487057/201487770-3e2cdb5d-5d3a-4288-89a4-3c39d0f1724d.mov
 
-```
+<img width="1394" alt="Screenshot 2022-11-12 at 11 42 04 PM" src="https://user-images.githubusercontent.com/83487057/201487762-85665774-e5a2-4e2c-9f2e-a750e26cf233.png">
 
 ## Usage
 
