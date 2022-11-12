@@ -15,7 +15,7 @@ yarn add react_dynamic_nested_table
 
 https://user-images.githubusercontent.com/83487057/201487770-3e2cdb5d-5d3a-4288-89a4-3c39d0f1724d.mov
 
-<img width="1394" alt="Screenshot 2022-11-12 at 11 42 04 PM" src="https://user-images.githubusercontent.com/83487057/201487762-85665774-e5a2-4e2c-9f2e-a750e26cf233.png">
+<img width="1385" alt="Screenshot 2022-11-12 at 11 36 13 PM" src="https://user-images.githubusercontent.com/83487057/201488206-8c79113e-248e-4f37-949e-b47b3cbc838d.png">
 
 ## Usage
 
@@ -172,6 +172,5 @@ Available filter props are -
                       3. isShowTableColumn  types-Boolean(true/false)
                       4. setIsShowTableColumn types-func()
                       5. titles types-array([])
-                      6. handlePostData
-types-func()
+                      6. handlePostData types-func()
 ```
