@@ -4,7 +4,7 @@ This is a table component that is so powerful to create a nested table, and also
 
 ## Installation
 
-Use the package manager [npm/yarn](https://www.npmjs.com/) to install react dynamic nested table.
+Use the package manager [npm/yarn](https://www.npmjs.com/) to install react dynamic nested table.(please read the documentation first)
 
 ```bash
 npm i react_dynamic_nested_table
@@ -12,8 +12,11 @@ npm i react_dynamic_nested_table
 ```bash
 yarn add react_dynamic_nested_table
 ```
-##<img width="1385" alt="Screenshot 2022-11-12 at 11 36 13 PM" src="https://user-images.githubusercontent.com/83487057/201487284-d9fbb188-8313-4b29-af3e-9ca3b4b40cf2.png">
+##
 ```
+https://user-images.githubusercontent.com/83487057/201487662-78b1bce8-9fe5-445e-9a79-6cb17a86b6a3.mov
+
+<img width="1385" alt="Screenshot 2022-11-12 at 11 36 13 PM" src="https://user-images.githubusercontent.com/83487057/201487284-d9fbb188-8313-4b29-af3e-9ca3b4b40cf2.png">
 
 ```
 
@@ -22,7 +25,6 @@ yarn add react_dynamic_nested_table
 ```
 import MainTable, { FilterTableColumn } from 'react_dynamic_nested_table';
 
-<!---please read the documentation first --->
 ```
 ## How to use table component
 ```
