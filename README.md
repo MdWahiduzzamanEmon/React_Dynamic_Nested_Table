@@ -156,7 +156,7 @@ const handleFilterPostData = async (columndata) => {
 
 //table component with filter true props to add filter
 
-<MainTable data={newData} titles={titles} filter={true} />
+<MainTable data={newData} titles={titles} filter={true} />`
 ```
 
 ```
@@ -165,6 +165,8 @@ Available table props are -
                       1.data={data} types-array([])
                       2.titles={titles} types-array([])
                       3.filter={false}  types-Boolean(true/false)(default-false)
+                      4.tableHeaderDesign={tableHeaderDesign} types-Object(default-color:#202b56)
+                      5.align types-String(default-left)
 
 Available filter props are - 
                       1.tableTitles types-array([])
