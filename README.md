@@ -21,14 +21,14 @@ https://user-images.githubusercontent.com/83487057/201487770-3e2cdb5d-5d3a-4288-
 
 ## Usage
 
-```
+``` bash
 import MainTable, { FilterTableColumn } from 'react_dynamic_nested_table';
 
 ```
 
 ## How to use table component
 
-```
+``` bash
 How to use a simple table :
 
  const titles = [
@@ -57,8 +57,8 @@ const data = [
 <MainTable data={data} titles={titles} />
 ```
 
-```
-How to use dynamic table :
+``` bash
+# How to use dynamic table :
 
  const titles = [
       'Name',
@@ -93,9 +93,10 @@ const newData = data?.map((item) => {
     }
 
 <MainTable data={newData} titles={titles} />
-```
 
 ```
+
+```bash
 How to use Filter in a table :
 
  const titles = [
@@ -115,7 +116,7 @@ const [isShowTableColumn, setIsShowTableColumn] = React.useState({
       Phone: true
     });
 
-<!-- N.B: make sure the title name, and table column condition name are the same. Don't use something like this to name your_name. Use instead YourName.It will generate a table header Like this (Your Name) -->
+### N.B: make sure the title name, and table column condition name are the same. Don't use something like this to name your_name. Use instead YourName.It will generate a table header Like this (Your Name)
 
 const data = [
       {
@@ -143,13 +144,13 @@ const newData = data?.map((item) => {
     }
 
 const handleFilterPostData = async (columndata) => {
-      // console.log(columnData)
-      //post and put column data from here
+      #  console.log(columnData)
+      #  post and put column data from here
     }
 
-<!-- you can get data from API and set your state to use -->
+### you can get data from API and set your state to use
 
-<!-- use this component to add a filter. You can use it and dialog/modal with the button if you want -->
+### use this component to add a filter. You can use it and dialog/modal with the button if you want to show it in a dialog/modal
 
  <FilterTableColumn
             tableTitles={tableTitles}
@@ -160,9 +161,10 @@ const handleFilterPostData = async (columndata) => {
             handlePostData={handlePostData}
           />
 
-<!-- table component with filter true props to add filter -->
+### table component with filter true props to add filter
 
-<MainTable data={newData} titles={titles} filter={true} />`
+< MainTable data={newData} titles={titles} filter={true} />
+
 ```
 
 ```bash
