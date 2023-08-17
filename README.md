@@ -115,7 +115,7 @@ const [isShowTableColumn, setIsShowTableColumn] = React.useState({
       Phone: true
     });
 
-//N.B: make sure the title name, and table column condition name are the same. Don't use something like this to name your_name. Use instead YourName.It will generate a table header Like this (Your Name)
+<!-- N.B: make sure the title name, and table column condition name are the same. Don't use something like this to name your_name. Use instead YourName.It will generate a table header Like this (Your Name) -->
 
 const data = [
       {
@@ -147,9 +147,9 @@ const handleFilterPostData = async (columndata) => {
       //post and put column data from here
     }
 
-//you can get data from API and set your state to use
+<!-- you can get data from API and set your state to use -->
 
-//use this component to add a filter. You can use it and dialog/modal with the button if you want
+<!-- use this component to add a filter. You can use it and dialog/modal with the button if you want -->
 
  <FilterTableColumn
             tableTitles={tableTitles}
@@ -160,7 +160,7 @@ const handleFilterPostData = async (columndata) => {
             handlePostData={handlePostData}
           />
 
-//table component with filter true props to add filter
+<!-- table component with filter true props to add filter -->
 
 <MainTable data={newData} titles={titles} filter={true} />`
 ```
