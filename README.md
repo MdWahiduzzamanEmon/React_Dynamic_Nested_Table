@@ -10,6 +10,7 @@ Use the package manager [npm/yarn](https://www.npmjs.com/) to install react dyna
 npm i react_dynamic_nested_table
 npm i --save-dev @types/react_dynamic_nested_table  # Only for typescript
 ```
+
 ```bash
 yarn add react_dynamic_nested_table
 ```
@@ -24,7 +25,9 @@ https://user-images.githubusercontent.com/83487057/201487770-3e2cdb5d-5d3a-4288-
 import MainTable, { FilterTableColumn } from 'react_dynamic_nested_table';
 
 ```
+
 ## How to use table component
+
 ```
 How to use a simple table :
 
@@ -53,9 +56,10 @@ const data = [
 
 <MainTable data={data} titles={titles} />
 ```
+
 ```
 How to use dynamic table :
-    
+
  const titles = [
       'Name',
       'Age',
@@ -90,6 +94,7 @@ const newData = data?.map((item) => {
 
 <MainTable data={newData} titles={titles} />
 ```
+
 ```
 How to use Filter in a table :
 
@@ -160,20 +165,28 @@ const handleFilterPostData = async (columndata) => {
 <MainTable data={newData} titles={titles} filter={true} />`
 ```
 
-```
+```bash
 
-Available table props are - 
-                      1.data={data} types-array([])
-                      2.titles={titles} types-array([])
-                      3.filter={false}  types-Boolean(true/false)(default-false)
-                      4.tableHeaderDesign={tableHeaderDesign} types-Object(default-color:#202b56)
-                      5.align types-String(default-left)
+## Available table props are
 
-Available filter props are - 
-                      1.tableTitles types-array([])
-                      2. setTableTitles types-func()
-                      3. isShowTableColumn  types-Boolean(true/false)
-                      4. setIsShowTableColumn types-func()
-                      5. titles types-array([])
-                      6. handlePostData types-func()
+| Props             | Types   | Default Value      | Description              |
+| ----------------- | ------- | ------------------ | ------------------------ |
+| data              | Array   | []                 | Data for table.          |
+| titles            | Array   | []                 | Table header title.      |
+| filter            | Boolean | false              | Filter table column.     |
+| tableHeaderDesign | Object  | {color: '#202b56'} | Table header design.     |
+| align             | String  | left               | Table header text align. |
+| style             | Object  | {}                 | Table style.             |
+
+## Available filter props are
+
+| Props                | Types   | Default Value | Description             |
+| -------------------- | ------- | ------------- | ----------------------- |
+| tableTitles          | Array   | []            | Table header title.     |
+| setTableTitles       | Func    |               | Set table header title. |
+| isShowTableColumn    | Boolean | true          | Show table column.      |
+| setIsShowTableColumn | Func    |               | Set show table column.  |
+| titles               | Array   | []            | Table header title.     |
+| handlePostData       | Func    |               | Handle post data.       |
+
 ```

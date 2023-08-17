@@ -4,16 +4,18 @@
 
 import React from "react";
 import classes from "./MianTable.module.css";
+import textFormatter from "text-formatter-js";
 const MainTable = ({
   align,
   titles,
   data,
   filter,
   tableHeaderDesign,
+  style,
   ...rest
 }) => {
   return (
-    <table className={classes.table} {...rest}>
+    <table className={classes.table} {...rest} style={style}>
       <thead style={tableHeaderDesign}>
         <tr className={classes.tableHeaderCell}>
           {/* {titles?.map((title, id) => (
@@ -23,7 +25,8 @@ const MainTable = ({
             ? Object?.keys(data?.[0])?.map((key, i) => (
                 <th className="header-column" key={i}>
                   {/* name with space before uppercase */}
-                  {key?.replace(/([A-Z])/g, " $1")?.trim()}
+                  {/* {key?.replace(/([A-Z])/g, " $1")?.trim()} */}
+                  {textFormatter(key)}
                 </th>
               ))
             : titles?.map((title, id) => <th key={id}>{title}</th>)}
