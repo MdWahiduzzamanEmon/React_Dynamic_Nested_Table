@@ -1,83 +1,90 @@
 {
-	"name": "react_dynamic_nested_table",
-	"version": "1.2.2",
-	"description": "React Dynamic Nested Table",
-	"private": false,
-	"author": "Md Wahiduzzaman Emon",
-	"license": "ISC",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"files": [
-		"dist",
-		"README.md"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/MdWahiduzzamanEmon/React_Dynamic_Nested_Table.git"
-	},
-	"keywords": [
-		"react",
-		"nested_table",
-		"dynamic_nested_table",
-		"react_dynamic_nested_table",
-		"react_nested_table",
-		"filter",
-		"column_filter_table_react",
-		"react_column_filter_table",
-		"react_filter_table",
-		"react_table_filter",
-		"react_table",
-		"hybrid_react_table",
-		"react_hybrid_table",
-		"react_table_hybrid",
-		"react_hybrid_nested_table",
-		"react_nested_hybrid_table",
-		"hybrid_nested_react_table",
-		"nested_hybrid_react_table",
-		"react_nested_table_hybrid",
-		"react_table_nested_hybrid",
-		"table"
-	],
-	"dependencies": {
-		"@babel/polyfill": "^7.12.1",
-		"@testing-library/jest-dom": "^6.0.0",
-		"@testing-library/react": "^14.0.0",
-		"@testing-library/user-event": "^14.4.3",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-scripts": "5.0.1",
-		"text-formatter-js": "^0.0.1",
-		"web-vitals": "^3.4.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.22.10",
-		"@babel/core": "^7.22.10",
-		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-		"@babel/preset-env": "^7.22.10",
-		"text-formatter-js": "^0.0.1"
-	}
+  "name": "react_dynamic_nested_table",
+  "version": "1.2.2",
+  "description": "React Dynamic Nested Table",
+  "private": false,
+  "author": "Md Wahiduzzaman Emon",
+  "license": "ISC",
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MdWahiduzzamanEmon/React_Dynamic_Nested_Table.git"
+  },
+  "keywords": [
+    "react",
+    "nested_table",
+    "dynamic_nested_table",
+    "react_dynamic_nested_table",
+    "react_nested_table",
+    "filter",
+    "column_filter_table_react",
+    "react_column_filter_table",
+    "react_filter_table",
+    "react_table_filter",
+    "react_table",
+    "hybrid_react_table",
+    "react_hybrid_table",
+    "react_table_hybrid",
+    "react_hybrid_nested_table",
+    "react_nested_hybrid_table",
+    "hybrid_nested_react_table",
+    "nested_hybrid_react_table",
+    "react_nested_table_hybrid",
+    "react_table_nested_hybrid",
+    "table"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "text-formatter-js": "^0.0.1",
+    "web-vitals": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+	"build": "rm -rf dist && NODE_ENV=production babel src/lib src/types --out-dir dist --copy-files && tsc --project tsconfig.json --outDir dist",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "typecheck": "tsc"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.22.10",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "text-formatter-js": "^0.0.1",
+    "typescript": "^5.1.6"
+  }
 }

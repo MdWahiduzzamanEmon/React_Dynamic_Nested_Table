@@ -8,7 +8,7 @@ Use the package manager [npm/yarn](https://www.npmjs.com/) to install react dyna
 
 ```bash
 npm i react_dynamic_nested_table
-npm i --save-dev @types/react_dynamic_nested_table  # Only for typescript
+
 ```
 
 ```bash
