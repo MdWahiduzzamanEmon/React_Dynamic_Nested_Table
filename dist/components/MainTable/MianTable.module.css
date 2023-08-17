@@ -1,11 +1,11 @@
 th,
 td {
   border: 1px solid rgb(204, 200, 200);
-  padding: 5px;
+  padding: 8px;
 }
 table {
   border-spacing: 0;
-  font-size: 11px; /*small*/
+  font-size: 12px; /*small*/
   width: 100%;
   border-collapse: collapse;
   

@@ -192,3 +192,18 @@ const handleFilterPostData = async (columndata) => {
 | handlePostData       | Func    |               | Handle post data.       |
 
 ```
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Author
+
+- <img align="left" src="https://user-images.githubusercontent.com/83487057/224383152-3d83875a-6e49-46c2-be8f-5d0627e0a27e.png" alt="md-wahiduzzaman-emon" height="40" width="40" /> [Md Wahiduzzaman Emon]
+
+## Contributing
+
+- Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+* Please make sure to update tests as appropriate.
