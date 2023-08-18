@@ -21,14 +21,14 @@ https://user-images.githubusercontent.com/83487057/201487770-3e2cdb5d-5d3a-4288-
 
 ## Usage
 
-``` bash
+```bash
 import MainTable, { FilterTableColumn } from 'react_dynamic_nested_table';
 
 ```
 
 ## How to use table component
 
-``` bash
+```bash
 How to use a simple table :
 
  const titles = [
@@ -57,7 +57,7 @@ const data = [
 <MainTable data={data} titles={titles} />
 ```
 
-``` bash
+```bash
 # How to use dynamic table :
 
  const titles = [
@@ -163,7 +163,7 @@ const handleFilterPostData = async (columndata) => {
 
 ### table component with filter true props to add filter
 
-< MainTable data={newData} titles={titles} filter={true} />
+< MainTable data={newData} filter={true} />
 
 ```
 
@@ -176,9 +176,10 @@ const handleFilterPostData = async (columndata) => {
 | data              | Array   | []                 | Data for table.          |
 | titles            | Array   | []                 | Table header title.      |
 | filter            | Boolean | false              | Filter table column.     |
-| tableHeaderDesign | Object  | {color: '#202b56'} | Table header design.     |
+| tableHeaderDesign | Object  | color: '#111936'   | Table header design.     |
 | align             | String  | left               | Table header text align. |
 | style             | Object  | {}                 | Table style.             |
+| dense             | string  | padding:"0.875rem" | Table padding.           |
 
 ## Available filter props are
 
@@ -192,7 +193,6 @@ const handleFilterPostData = async (columndata) => {
 | handlePostData       | Func    |               | Handle post data.       |
 
 ```
-
 
 ## License
 
