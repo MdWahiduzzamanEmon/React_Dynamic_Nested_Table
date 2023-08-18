@@ -54,7 +54,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib src/types tsconfig.json babel.config.json --out-dir dist --copy-files && tsc --project tsconfig.json --outDir dist",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib src/types --out-dir dist --copy-files && tsc --project tsconfig.json --outDir dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "typecheck": "rm -rf dist && tsc && tsc --noEmit"
