@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "jest"],
+    "sourceMap": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts","**/*.test.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
