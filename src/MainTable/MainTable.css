@@ -1,0 +1,36 @@
+th,
+td {
+  border: 0.0625rem solid rgba(126, 121, 121, 0.175);
+  padding: 0.75rem;
+}
+
+table {
+  border-spacing: 0;
+  font-size: 0.875rem; /*small*/
+  width: 100%;
+  border-collapse: collapse;
+}
+.header {
+  background-color: #111936;
+  /* background-color: #202b56; */
+  color: #fff;
+  /* color: black; */
+}
+
+/* //add border raduis top to table header */
+.header tr:first-child th:first-child {
+  border-top-left-radius: 0.3125rem;
+  /* //border left none to remove border */
+  border-left: none;
+  border-top: none;
+}
+.header tr:first-child th:last-child {
+  border-top-right-radius: 0.3125rem;
+  border-right: none;
+  border-top: none;
+}
+
+/* //table header border none */
+.header tr:first-child th {
+  border: none;
+}
