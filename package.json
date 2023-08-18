@@ -5,12 +5,11 @@
   "private": false,
   "author": "Md Wahiduzzaman Emon",
   "license": "ISC",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
+   "lib/**/*",
+   "README.md"
   ],
   "repository": {
     "type": "git",
@@ -40,43 +39,20 @@
     "table"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-		"@testing-library/jest-dom": "^5.16.5",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-scripts": "5.0.1",
-		"web-vitals": "^2.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
     "text-formatter-js": "^0.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build": "rm -rf lib && tsc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-		"@babel/core": "^7.20.2",
-		"@babel/preset-env": "^7.20.2"
+    "typescript": "^5.1.6"
   }
 }

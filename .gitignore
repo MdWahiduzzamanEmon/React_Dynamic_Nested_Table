@@ -4,6 +4,7 @@
 /node_modules
 /src
 /dist
+/lib
 /.pnp
 .pnp.js
 
