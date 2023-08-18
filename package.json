@@ -1,12 +1,12 @@
 {
   "name": "react_dynamic_nested_table",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "React Dynamic Nested Table",
   "private": false,
   "author": "Md Wahiduzzaman Emon",
   "license": "ISC",
-  "main": "dist/lib/index.js",
-  "module": "dist/lib/index.js",
+  "main": "dist/index.tsx",
+  "module": "dist/index.tsx",
   "files": [
     "dist",
     "README.md",
@@ -54,10 +54,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib src/types --out-dir dist --copy-files && tsc --project tsconfig.json --outDir dist",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib src/types tsconfig.json babel.config.json --out-dir dist --copy-files && tsc --project tsconfig.json --outDir dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "typecheck": "tsc"
+    "typecheck": "rm -rf dist && tsc && tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
