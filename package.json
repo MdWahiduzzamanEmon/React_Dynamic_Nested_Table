@@ -5,8 +5,8 @@
   "private": false,
   "author": "Md Wahiduzzaman Emon",
   "license": "ISC",
-  "main": "dist/index.tsx",
-  "module": "dist/index.tsx",
+  "main": "dist/index.jsx",
+  "module": "dist/index.jsx",
   "files": [
     "dist",
     "README.md",
@@ -44,8 +44,6 @@
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.5.3",
-    "@types/node": "^20.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -54,10 +52,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib src/types --out-dir dist --copy-files && tsc --project tsconfig.json --outDir dist",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "typecheck": "rm -rf dist && tsc && tsc --noEmit"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -80,14 +77,6 @@
   "devDependencies": {
     "@babel/cli": "^7.22.10",
     "@babel/core": "^7.22.10",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/preset-env": "^7.22.10",
-    "@babel/preset-typescript": "^7.22.5",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "babel-loader": "^9.1.3",
-    "text-formatter-js": "^0.0.1",
-    "ts-loader": "^9.4.4",
-    "typescript": "^5.1.6"
+		"@babel/preset-env": "^7.20.2"
   }
 }
