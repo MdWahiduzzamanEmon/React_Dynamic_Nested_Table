@@ -14,6 +14,6 @@
     "types": ["node", "jest"],
     "sourceMap": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "types/**/*", "test/**/*", "index.ts"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
