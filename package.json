@@ -39,7 +39,7 @@
     "table"
   ],
   "dependencies": {
-    "@types/react": "^18.2.20",
+    "@types/react": "^18.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
